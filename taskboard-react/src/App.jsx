@@ -18,7 +18,13 @@ function App() {
   }, [token]);
 
   if (!token) {
-    return <LoginForm onLogin={setToken} />;
+    return (
+      <div className="app-shell">
+        <div className="login-card">
+          <LoginForm onLogin={setToken} />
+        </div>
+      </div>
+    );
   }
 
   const handleProjectAdded = (project) => {

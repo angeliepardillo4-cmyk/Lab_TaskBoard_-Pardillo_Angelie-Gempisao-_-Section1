@@ -32,7 +32,8 @@ export default function LoginForm({ onLogin }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
+      <p className="eyebrow">Taskboard</p>
       <h2>Login</h2>
 
       <label>
@@ -61,7 +62,7 @@ export default function LoginForm({ onLogin }) {
         {loading ? 'Logging in...' : 'Login'}
       </button>
 
-      {error && <p role="alert">{error}</p>}
+      {error && <p className="message error" role="alert">{error}</p>}
     </form>
   );
 }
